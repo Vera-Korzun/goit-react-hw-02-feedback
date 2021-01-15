@@ -3,6 +3,7 @@ import FeedbackOptions from "./feedback/FeedbackOptions ";
 import Notification from "./notification/Notification";
 import Sections from "./sections/Sections";
 import Statistics from "./statistic/Statistics";
+import AppWrapper from "./AppStyled";
 
 class App extends Component {
   state = {
@@ -29,7 +30,7 @@ class App extends Component {
   render() {
     //const { good, neutral, bad } = this.state;
     return (
-      <div>
+      <AppWrapper>
         <Sections title="Please leave feedback">
           <FeedbackOptions
             // good="good"
@@ -53,7 +54,7 @@ class App extends Component {
             <Notification message="No feedback given" />
           )}
         </Sections>
-      </div>
+      </AppWrapper>
     );
   }
 }

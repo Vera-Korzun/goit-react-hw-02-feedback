@@ -1,19 +1,25 @@
 import React from "react";
+import FeedbackButtons from "./FeedbackOptionsstyled";
 
 const FeedbackOptions = ({ state, onHandleClick }) => {
   return (
-    <>
-      {Object.keys(state).map((item) => (
-        <button
-          type="button"
-          key={item}
-          data-name={item}
-          onClick={onHandleClick}
-        >
-          {item[0].toUpperCase() + item.slice(1)}
-        </button>
-      ))}
-    </>
+    <FeedbackButtons>
+      <ul className="list feedback__list">
+        {Object.keys(state).map((item) => (
+          <li className="feedback__list-item" key={item}>
+            <button
+              className="feedback__list-btn"
+              type="button"
+              key={item}
+              data-name={item}
+              onClick={onHandleClick}
+            >
+              {item[0].toUpperCase() + item.slice(1)}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </FeedbackButtons>
   );
 };
 
