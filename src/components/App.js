@@ -27,23 +27,25 @@ class App extends Component {
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
+    //const { good, neutral, bad } = this.state;
     return (
       <div>
         <Sections title="Please leave feedback">
           <FeedbackOptions
-            good="good"
-            neutral="neutral"
-            bad="bad"
+            // good="good"
+            // neutral="neutral"
+            // bad="bad"
+            state={this.state}
             onHandleClick={this.onHandleClick}
           />
         </Sections>
         <Sections title="Statistics">
           {this.countTotalFeedback() ? (
             <Statistics
-              good={good}
-              neutral={neutral}
-              bad={bad}
+              // good={good}
+              // neutral={neutral}
+              // bad={bad}
+              state={this.state}
               total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
