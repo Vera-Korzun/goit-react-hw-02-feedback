@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import FeedbackButtons from "./FeedbackOptionsstyled";
 
 const FeedbackOptions = ({ state, onHandleClick }) => {
@@ -24,6 +25,11 @@ const FeedbackOptions = ({ state, onHandleClick }) => {
 };
 
 export default FeedbackOptions;
+
+FeedbackOptions.propTypes = {
+  state: PropTypes.object,
+  onHandleClick: PropTypes.func,
+};
 
 // import React from "react";
 

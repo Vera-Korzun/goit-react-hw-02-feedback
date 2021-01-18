@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StatisticsList from "./StatisticsStyled";
 
 const Statistics = ({ state, total, positivePercentage }) => {
@@ -23,6 +24,12 @@ const Statistics = ({ state, total, positivePercentage }) => {
 };
 
 export default Statistics;
+
+StatisticsList.propTypes = {
+  state: PropTypes.object,
+  total: PropTypes.func,
+  positivePercentage: PropTypes.func,
+};
 
 // import React from "react";
 

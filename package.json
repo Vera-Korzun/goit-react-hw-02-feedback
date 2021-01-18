@@ -37,5 +37,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://vera-korzun.github.io/goit-react-hw-02-feedback"
+  "homepage": "https://vera-korzun.github.io/goit-react-hw-02-feedback",
+  "devDependencies": {
+    "prop-types": "^15.7.2"
+  }
 }

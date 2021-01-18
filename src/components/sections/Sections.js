@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import SectionWrapper from "./SectionWrapperStyled";
 
 const Sections = ({ title, children }) => {
@@ -13,3 +14,8 @@ const Sections = ({ title, children }) => {
 };
 
 export default Sections;
+
+Sections.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.object.isRequired,
+};
